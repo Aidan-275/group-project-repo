@@ -2,6 +2,7 @@ Wednesday 9AM Group 9
 
 Group members:
 Aidan M
+Dylan W
 
 ![workflow](https://github.com/Aidan-275/sem/actions/workflows/main.yml/badge.svg)
 [![LICENSE](https://img.shields.io/github/license/Aidan-275/sem.svg?style=flat-square)](https://github.com/Aidan-275/sem/blob/master/LICENSE)
