@@ -1,7 +1,7 @@
 Wednesday 9AM Group 9
 
 Group members:
-Aidan M
+Aidan M,
 Dylan W
 
 ![workflow](https://github.com/Aidan-275/sem/actions/workflows/main.yml/badge.svg)
