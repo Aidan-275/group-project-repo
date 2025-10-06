@@ -12,4 +12,43 @@ Code Review 1 Backlog
 
 Code Review 2 Backlog
 ----------------------------------------------------------------------------------
--WIP
+
+-use issues on github
+-define tasks to be completed as user stories
+-zube.io integration
+-make a kanban board
+
+-remember to comment code!
+-figure out how to use sql files inside intellij
+-generate some reports to test
+-split reports between group members
+-reports to be done:
+ -All the countries in the world organised by largest population to smallest.
+ -All the countries in a continent organised by largest population to smallest.
+ -All the countries in a region organised by largest population to smallest.
+ -The top N populated countries in the world where N is provided by the user.
+ -The top N populated countries in a continent where N is provided by the user.
+ -The top N populated countries in a region where N is provided by the user.
+ -All the cities in the world organised by largest population to smallest.
+ -All the cities in a continent organised by largest population to smallest.
+ -All the cities in a region organised by largest population to smallest.
+ -All the cities in a country organised by largest population to smallest.
+ -All the cities in a district organised by largest population to smallest.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
