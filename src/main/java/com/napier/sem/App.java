@@ -6,6 +6,25 @@ public class App
 {
     public static void main(String[] args)
     {
+        // Create new Application
+        App a = new App();
+
+        // Connect to database
+        a.connect();
+
+        // Disconnect from database
+        a.disconnect();
+    }
+
+    /**
+     * Connection to database
+     */
+    private Connection con = null;
+    /**
+     * Connect to the database
+     */
+    public void connect()
+    {
         try
         {
             // Load Database driver
@@ -17,8 +36,6 @@ public class App
             System.exit(-1);
         }
 
-        // Connection to the database
-        Connection con = null;
         int retries = 100;
         for (int i = 0; i < retries; ++i)
         {
@@ -45,7 +62,10 @@ public class App
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
+    }
 
+    public void disconnect()
+    {
         if (con != null)
         {
             try
