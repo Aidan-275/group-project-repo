@@ -1,0 +1,17 @@
+@startuml
+
+actor ORG as "Organisation Employee"
+
+rectangle Database
+
+rectangle "Population Reporting Organisation" {
+    usecase UC1 as "Get population of countries by world/continent/region/"
+
+    usecase UCa as "Population Ordered by Descending"
+
+    ORG - UC1
+    UC1 ..> UCa : include
+    UC1 - Database
+}
+
+@enduml
