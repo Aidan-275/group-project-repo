@@ -5,38 +5,21 @@ package com.napier.sem;
  */
 public class World
 {
-    /**
-     * Employee number
-     */
-    public int emp_no;
 
-    /**
-     * Employee's first name
-     */
-    public String first_name;
+    public int Code;
 
-    /**
-     * Employee's last name
-     */
-    public String last_name;
 
-    /**
-     * Employee's job title
-     */
-    public String title;
+    public String Name;
 
-    /**
-     * Employee's salary
-     */
-    public int salary;
 
-    /**
-     * Employee's current department
-     */
-    public String dept_name;
+    public String Continent;
 
-    /**
-     * Employee's manager
-     */
-    public String manager;
+
+    public String Region;
+
+
+    public int Population;
+
+
+
 }
