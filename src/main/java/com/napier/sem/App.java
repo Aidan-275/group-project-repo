@@ -16,6 +16,7 @@ public class App
         a.disconnect();
     }
 
+
     /**
      * Connection to database
      */
