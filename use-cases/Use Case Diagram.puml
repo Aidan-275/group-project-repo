@@ -1,0 +1,69 @@
+@startuml
+left to right direction
+
+actor "Organisation" as Org
+
+rectangle "Population Reporting System" as System {
+
+    usecase "Select One (World / Continent / Region / Country / District / City)" as UC1
+    usecase "Generate Total Population Report" as UC2
+    UC1 --> UC2 : <<include>>
+
+    usecase "Select One (World / Continent / Region /  District)" as UC3
+    usecase "Generate Top Populated Cities Report" as UC4
+    UC3 --> UC4 : <<include>>
+
+    usecase "Select One (Continent / Region /  Country)" as UC5
+    usecase "Generate Total Population of People Living in Cities Report" as UC6
+    usecase "Generate Total Population of People Not Living in Cities Report" as UC7
+    UC5 --> UC6 : <<include>>
+    UC5 --> UC7 : <<include>>
+
+    usecase "Select One (World / Continent / Region)" as UC8
+    usecase "Generate Top Populated Countries Report" as UC9
+    UC8 --> UC9 : <<include>>
+
+    usecase "Select One (World / Continent / Region)" as UC10
+    usecase "Generate Top Populated Capital Cities Report" as UC11
+    UC10 --> UC11 : <<include>>
+
+    usecase "Generate Population of World Speaking Chinese, English, Hindi, Spanish and Arabic Report" as UC13
+
+    usecase "Select One (World / Continent / Region /  District)" as UC14
+    usecase "Generate City List Ordered By Descending Population Report" as UC15
+    UC14 --> UC15 : <<include>>
+
+    usecase "Select One (World / Continent / Region)" as UC16
+    usecase "Generate Capital City List Ordered By Descending Population Report" as UC17
+    UC16 --> UC17 : <<include>>
+
+    usecase "Select One (World / Continent / Region)" as UC18
+    usecase "Generate Countries List Ordered By Descending Population Report" as UC19
+    UC18 --> UC19 : <<include>>
+}
+
+rectangle "World Database" as DB
+
+Org --> UC1
+Org --> UC3
+Org --> UC5
+Org --> UC8
+Org --> UC10
+Org --> UC14
+Org --> UC16
+Org --> UC18
+
+Org --> UC13
+
+UC2 --> DB
+UC4 --> DB
+UC6 --> DB
+UC7 --> DB
+UC9 --> DB
+UC11 --> DB
+UC13 --> DB
+UC15 --> DB
+UC17 --> DB
+UC19 --> DB
+
+@enduml
