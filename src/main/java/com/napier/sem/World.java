@@ -1,7 +1,7 @@
 package com.napier.sem;
 
 /**
- * Represents an employee
+ * Represents the world database
  */
 public class World
 {
