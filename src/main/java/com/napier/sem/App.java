@@ -21,7 +21,7 @@ public class App
         }else{
             a.connect(args[0], Integer.parseInt(args[1]));
         }
-
+//
         // Extract employee salary information
         ArrayList<Country> countries = a.getAllCountries();
 
