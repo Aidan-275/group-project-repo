@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.*;
 
 public class App
 {
@@ -13,6 +14,14 @@ public class App
         }else{
             a.connect(args[0], Integer.parseInt(args[1]));
         }
+
+        // Extract employee salary information
+        ArrayList<Country> countries = a.getAllCountries();
+
+        // Test the size of the returned data - should be 240124
+        System.out.println(countries.size());
+
+        a.printCountries(countries);
 
         // Disconnect from database
         a.disconnect();
@@ -69,6 +78,59 @@ public class App
             {
                 System.out.println("Error closing connection to database");
             }
+        }
+    }
+    /**
+     * Gets all the current employees and salaries.
+     * @return A list of all employees and salaries, or null if there is an error.
+     */
+    public ArrayList<Country> getAllCountries()
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT Code, Name, Continent, Region, Population, Capital\n" +
+                    "From country \n" +
+                    "ORDER BY Population DESC";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Extract employee information
+            ArrayList<Country> countries = new ArrayList<Country>();
+            while (rset.next())
+            {
+                Country co = new Country();
+                co.Code = rset.getString("Code");
+                co.Name = rset.getString("Name");
+                co.Continent = rset.getString("Continent");
+                co.Region = rset.getString("Region");
+                co.Population = rset.getInt("Population");
+                co.Capital = rset.getString("Capital");
+
+                countries.add(co);
+            }
+            return countries;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+    public void printCountries(ArrayList<Country> countries)
+    {
+        // Print header
+        System.out.printf("%-5s %-30s %-15s %-20s %-12s %-10s%n",
+                "Code", "Name", "Continent", "Region", "Population", "Capital");
+
+        // Loop over all countries in the list
+        for (Country co : countries)
+        {
+            System.out.printf("%-5s %-30s %-15s %-20s %-12d %-10s%n",
+                    co.Code, co.Name, co.Continent, co.Region, co.Population, co.Capital);
         }
     }
 }
