@@ -3,8 +3,15 @@ package com.napier.sem;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * The main class app where we have our methods
+ * connect/disconnect from database as well as methods that will be used for testing
+ */
 public class App
 {
+    /**
+     * Main method that creates a new app object and calls other methods
+     */
     public static void main(String[] args) {
         // Create new Application and connect to database
         App a = new App();
@@ -32,6 +39,7 @@ public class App
      * Connection to database
      */
     private Connection con = null;
+
     /**
      * Connect to the database
      */
@@ -65,6 +73,9 @@ public class App
         }
     }
 
+    /**
+     * Method to disconnect from the database
+     */
     public void disconnect()
     {
         if (con != null)
@@ -120,6 +131,10 @@ public class App
             return null;
         }
     }
+
+    /**
+     * Prints the countries of a given arraylist of country objects
+     */
     public void printCountries(ArrayList<Country> countries)
     {
         // Print header
