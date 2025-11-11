@@ -1,4 +1,4 @@
 FROM amazoncorretto:17
 COPY ./target/seMethods-1.0-alpha-2-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar", "seMethods-1.0-alpha-2-jar-with-dependencies.jar"]
+ENTRYPOINT ["java", "-jar", "seMethods-1.0-alpha-2-jar-with-dependencies.jar", "db:3306", "30000"]
