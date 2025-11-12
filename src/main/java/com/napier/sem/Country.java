@@ -2,7 +2,8 @@
     package com.napier.sem;
 
     /**
-     * Represents the world database
+     * A class which represents the country table of the world database.
+     * Properties correspond to columns in the table.
      */
     public class Country
     {

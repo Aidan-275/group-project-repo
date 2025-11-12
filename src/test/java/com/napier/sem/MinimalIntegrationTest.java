@@ -10,7 +10,7 @@ public class MinimalIntegrationTest {
 
     @Test
     void appInstanceIsNotNull() {
-        // test to check if the app object is not null
+        // test method to check if the app object is not null
         App app = new App();
         assertNotNull(app, "App instance should not be null");
     }
