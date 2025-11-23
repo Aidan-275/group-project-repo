@@ -7,9 +7,9 @@ How to clone the project:
 6. Click **Clone**
 ---
 How to run the project:
-1. Open Docker Desktop
+1. Open Docker Desktop as it must be running in order to run the app
 2. Go to IntelliJ and open the **docker-compose.yml** file
-3. Click the run button next to the line that says **db**
+3. Click the run button next to the line that says **db**, we run this first to set up the connection to the db
 4. Go to the **Services** tab in the bottom left
 5. Under **Docker**, go to **Docker-compose: group-project-repo > db**
 6. You should see **group-project-repo-db-1** with a health status next to it, wait until it says **healthy**
@@ -17,3 +17,11 @@ How to run the project:
 8. Go to the **Services** tab again, go to **Docker-compose: group-project-repo > app**
 9. You should see that the app has ran inside the **Log** menu
 ---
+How to submit Pull Requests:
+1. Push your branch to GitHub
+2. Go to the repository on GitHub
+3. Click the button to open a Pull Request
+4. Choose the branch you want to merge **from** and **into**
+5. Add a summary of what changed
+6. Submit it
+7. Someone else reviews it, then merges it
