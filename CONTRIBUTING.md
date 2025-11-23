@@ -25,3 +25,10 @@ How to submit Pull Requests:
 5. Add a summary of what changed
 6. Submit it
 7. Someone else reviews it, then merges it
+---
+How to report bugs using the issue template:
+1. Go to the **Issues** tab
+2. Click **New Issue**
+3. Select the **bug** template
+4. Fill it in
+5. Submit the issue
