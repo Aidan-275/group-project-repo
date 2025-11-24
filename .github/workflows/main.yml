@@ -1,14 +1,13 @@
 name: A workflow for my Hello World App
 
 on:
-
   push:
     branches:
       - master
       - feature-deployment
-  permissions:
-    contents: write
 
+permissions:
+  contents: write
 
 jobs:
   UnitTests:
