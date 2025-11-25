@@ -34,7 +34,7 @@ public class App
         a.disconnect();
     }
 
-
+//x
     /**
      * Connection to database
      */
